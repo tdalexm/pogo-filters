@@ -1,0 +1,18 @@
+---
+interface Pokemon {
+	id: number;
+	name: string;
+}
+
+interface Props {	
+	pokemon: Pokemon;
+}
+
+const {pokemon} = Astro.props;
+
+---
+
+<img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`}
+	alt={pokemon.name} />
+<p>#{pokemon.id} {pokemon.name}</p>
+

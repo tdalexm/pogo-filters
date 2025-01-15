@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { PogoAdapter } from '../services/pokemon-api/adapters/driven/PogoAdapter';
+
+const pokemonList = await fetch('https://pogoapi.net/api/v1/released_pokemon.json');
+const url = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png";
+
+const data = await PogoAdapter.instance.getPokemon();
+console.log(data);
+---
+
+<Layout>
+</Layout>
